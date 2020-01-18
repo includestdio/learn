@@ -43,20 +43,45 @@ public class IPersistenceTest {
 
 
     @Test
-    public void test1() throws Exception {
+    public void testSave() throws Exception {
         InputStream resourceAsSteam = Resources.getResourceAsSteam("sqlMapConfig.xml");
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(resourceAsSteam);
         SqlSession sqlSession = sqlSessionFactory.openSession();
 
-        //调用
         User user = new User();
         user.setId(1);
         user.setUsername("1234");
 
         IUserDao userDao = sqlSession.getMapper1(IUserDao.class);
+        userDao.saveUser(user);
+    }
 
+    @Test
+    public void testUpdate() throws Exception {
+        InputStream resourceAsSteam = Resources.getResourceAsSteam("sqlMapConfig.xml");
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(resourceAsSteam);
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+
+        User user = new User();
+        user.setId(1);
+        user.setUsername("1234");
+
+        IUserDao userDao = sqlSession.getMapper1(IUserDao.class);
+        userDao.updateUser(user);
+    }
+
+    @Test
+    public void testDelete() throws Exception {
+        InputStream resourceAsSteam = Resources.getResourceAsSteam("sqlMapConfig.xml");
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(resourceAsSteam);
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+
+        User user = new User();
+        user.setId(1);
+        user.setUsername("1234");
+
+        IUserDao userDao = sqlSession.getMapper1(IUserDao.class);
         userDao.deleteUser(user);
-
     }
 
 }
