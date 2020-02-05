@@ -1,0 +1,12 @@
+记录循环依赖流程：
+
+AbstractAutowireCapableBeanFactory.doCreateBean  创建beanA，
+AbstractAutowireCapableBeanFactory.addSingletonFactory  把beanA加入三级缓存
+
+applyPropertyValues  处理beanA的属性依赖
+
+DefaultSingletonBeanRegistry.getSingleton 从三级缓存中拿beanA
+
+earlySingletonObjects 放入二级缓存
+singletonObjects 放入一级缓存
+singletonFactories 放入三级缓存
