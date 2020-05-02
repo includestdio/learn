@@ -23,4 +23,5 @@
     <bean id="proxyFactory" class="com.lagou.edu.factory.ProxyFactory">
         <property name="TransactionManager" ref="transactionManager"/>
     </bean>
+
 </beans>

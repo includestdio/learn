@@ -1,5 +1,6 @@
 package com.lagou.edu.factory;
 
+import com.lagou.edu.config.MyService;
 import com.lagou.edu.pojo.Account;
 import com.lagou.edu.utils.TransactionManager;
 import net.sf.cglib.proxy.Enhancer;
@@ -25,18 +26,6 @@ public class ProxyFactory {
     public void setTransactionManager(TransactionManager transactionManager) {
         this.transactionManager = transactionManager;
     }
-
-    /*private ProxyFactory(){
-
-    }
-
-    private static ProxyFactory proxyFactory = new ProxyFactory();
-
-    public static ProxyFactory getInstance() {
-        return proxyFactory;
-    }*/
-
-
 
     /**
      * Jdk动态代理

@@ -1,5 +1,6 @@
 package com.lagou.edu.servlet;
 
+import com.lagou.edu.config.MyAutowired;
 import com.lagou.edu.factory.BeanFactory;
 import com.lagou.edu.factory.ProxyFactory;
 import com.lagou.edu.service.impl.TransferServiceImpl;
