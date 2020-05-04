@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/code.iml" filepath="$PROJECT_DIR$/.idea/code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lagou-transfer/lagou-transfer.iml" filepath="$PROJECT_DIR$/lagou-transfer/lagou-transfer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lagou-transfer-ioc-anno/lagou-transfer-ioc-anno.iml" filepath="$PROJECT_DIR$/lagou-transfer-ioc-anno/lagou-transfer-ioc-anno.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lagou-transfer-ioc-xml-anno/lagou-transfer-ioc-xml-anno.iml" filepath="$PROJECT_DIR$/lagou-transfer-ioc-xml-anno/lagou-transfer-ioc-xml-anno.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lagou-transfer-transaction/lagou-transfer-transaction.iml" filepath="$PROJECT_DIR$/lagou-transfer-transaction/lagou-transfer-transaction.iml" />
+    </modules>
+  </component>
+</project>
