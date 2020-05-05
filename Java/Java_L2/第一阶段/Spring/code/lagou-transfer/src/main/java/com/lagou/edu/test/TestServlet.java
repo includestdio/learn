@@ -6,7 +6,8 @@ public class TestServlet {
 
     public static void main(String[] args) throws Exception {
         MyApplicationContext app = new MyApplicationContext("com.lagou.edu.test");
-        Object userService = app.getBean("testService");
+        TestService userService = (TestService) app.getBean("testService");
+        userService.add();
         System.out.println(userService);
     }
 }
