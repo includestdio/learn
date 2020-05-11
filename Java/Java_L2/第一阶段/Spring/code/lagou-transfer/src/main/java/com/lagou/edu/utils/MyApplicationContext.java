@@ -30,7 +30,7 @@ public class MyApplicationContext {
         for (Map.Entry<String,Object> entry : beans.entrySet()) {
             //2、判断属性上面是否有加注解
             Object bean = entry.getValue();
-            attriAssign(beans);
+            attriAssign(bean);
         }
     }
 
@@ -89,6 +89,7 @@ public class MyApplicationContext {
         //1、使用反射机制，获取当前类的所有属性
         Class<? extends Object> classInfo = object.getClass();
         Field[] declaredFields = classInfo.getDeclaredFields();
+
         //2、判断当前类属性是否存在注解
         for (Field field : declaredFields){
             MyAutowired extResource = field.getAnnotation(MyAutowired.class);

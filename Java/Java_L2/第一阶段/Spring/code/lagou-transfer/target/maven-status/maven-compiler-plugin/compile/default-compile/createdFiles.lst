@@ -1,3 +1,4 @@
+com\lagou\edu\servlet\TransferServicelTest.class
 com\lagou\edu\utils\TransactionManager.class
 com\lagou\edu\dao\impl\JdbcAccountDaoImpl.class
 com\lagou\edu\factory\ProxyFactory$2.class
