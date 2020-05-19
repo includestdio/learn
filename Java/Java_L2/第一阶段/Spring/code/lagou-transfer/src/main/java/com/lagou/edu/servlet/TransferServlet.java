@@ -2,13 +2,8 @@ package com.lagou.edu.servlet;
 
 import com.lagou.edu.config.MyAutowired;
 import com.lagou.edu.config.MyService;
-import com.lagou.edu.factory.BeanFactory;
-import com.lagou.edu.factory.ProxyFactory;
-import com.lagou.edu.service.impl.TransferServiceImpl;
 import com.lagou.edu.utils.JsonUtils;
 import com.lagou.edu.pojo.Result;
-import com.lagou.edu.service.TransferService;
-import com.lagou.edu.utils.MyApplicationContext;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -30,12 +25,12 @@ public class TransferServlet extends HttpServlet {
 
     // 从工厂获取委托对象（委托对象是增强了事务控制的功能）
 
-    // 首先从BeanFactory获取到proxyFactory代理工厂的实例化对象
+//     首先从BeanFactory获取到proxyFactory代理工厂的实例化对象
 //    private ProxyFactory proxyFactory = (ProxyFactory) BeanFactory.getBean("proxyFactory");
 //    private TransferService transferService = (TransferService) proxyFactory.getJdkProxy(BeanFactory.getBean("transferService")) ;
 
     @MyAutowired
-    private TransferServicelTest transferService;
+    private TransferServicelTest transferServiceTest;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -58,7 +53,7 @@ public class TransferServlet extends HttpServlet {
         try {
 
             // 2. 调用service层方法
-            transferService.transfer(fromCardNo,toCardNo,money);
+            transferServiceTest.transfer(fromCardNo,toCardNo,money);
             result.setStatus("200");
         } catch (Exception e) {
             e.printStackTrace();

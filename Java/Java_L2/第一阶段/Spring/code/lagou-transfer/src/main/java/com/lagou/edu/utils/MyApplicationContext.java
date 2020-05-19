@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+@MyService
 public class MyApplicationContext {
 
     private String packageName;
@@ -19,7 +20,7 @@ public class MyApplicationContext {
 
     public MyApplicationContext(String packageName) throws Exception {
         beans = new ConcurrentHashMap<String,Object>();
-        this.packageName = packageName;
+        this.packageName = "com.lagou.edu.servlet";
         initBeans();
         initEntryField();
     }
